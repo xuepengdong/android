@@ -4,16 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="ExtraText">
 
     <TextView
         android:id="@+id/tv_hello"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="@string/hello"
+        android:textSize="130px"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_px"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="前端部（px大小）"
+        android:textSize="30px"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="前端部（dp大小）"
+        android:textSize="30dp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tv_sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="前端部（sp大小）"
+        android:textColor="@color/red"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/mybutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="跳转"
+        android:layout_centerInParent="true"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

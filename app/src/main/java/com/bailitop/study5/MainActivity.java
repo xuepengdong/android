@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,7 +21,17 @@ public class MainActivity extends AppCompatActivity {
         //獲取名為tv_hello的TextView的控件，注意添加導包語句
         TextView tv_hello = findViewById(R.id.tv_hello);
         // 設置textView控件得文字內容
-        tv_hello.setText("你好啊");
+        tv_hello.setText("前端部");
+
+        Button myButton = findViewById(R.id.mybutton);
+        myButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ViewBorderActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     protected void onResume(){
@@ -29,9 +41,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void goNextPage(){
         TextView tv_hello = findViewById(R.id.tv_hello);
-        tv_hello.setText("3秒後進入下一個頁面");
+//        tv_hello.setText("3秒後進入下一個頁面");
         //延遲三秒
-        new Handler().postDelayed(mGoNext, 3000);
+//        new Handler().postDelayed(mGoNext, 3000);
 
     }
 

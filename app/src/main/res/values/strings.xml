@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">study5</string>
+    <string name="hello">前端部</string>
+    <string name="hello_world_222222222222222222222222222222222">Hello World!222222222222222222222222222222222</string>
 </resources>
