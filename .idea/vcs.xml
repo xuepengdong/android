@@ -2,6 +2,6 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/学习资料/Android第3版源码/Android第3版源码/android3" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/information/code/android3" vcs="Git" />
   </component>
 </project>
