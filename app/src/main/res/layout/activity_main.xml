@@ -117,9 +117,17 @@
                 android:text="跳转到activity_button_click"
                 android:layout_centerInParent="true"
                 tools:ignore="MissingConstraints" />
+            <Button
+                android:id="@+id/activity_button_longclick"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到activity_button_longclick"
+                android:layout_centerInParent="true"
+                tools:ignore="MissingConstraints" />
+
+
+
         </LinearLayout>
-
-
     </LinearLayout>
 
 

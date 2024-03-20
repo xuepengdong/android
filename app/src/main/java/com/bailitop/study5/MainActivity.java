@@ -91,6 +91,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Button activity_button_longclick = findViewById(R.id.activity_button_longclick);
+        activity_button_longclick.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,buttonLongclickActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
     }
