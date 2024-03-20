@@ -125,6 +125,13 @@
                 android:layout_centerInParent="true"
                 tools:ignore="MissingConstraints" />
 
+            <Button
+                android:id="@+id/activity_button_enable"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="跳转到activity_button_enable"
+                android:layout_centerInParent="true"
+                tools:ignore="MissingConstraints" />
 
 
         </LinearLayout>

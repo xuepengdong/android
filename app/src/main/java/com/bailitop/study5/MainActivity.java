@@ -100,7 +100,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button activity_button_enable = findViewById(R.id.activity_button_enable);
+        activity_button_enable.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,buttonEnableActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 
