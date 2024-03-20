@@ -27,6 +27,7 @@
         <activity android:name=".activity_relative_layout"></activity>
         <activity android:name=".gridLayoutActivity"></activity>
         <activity android:name=".scrollLayoutActivity"></activity>
+        <activity android:name=".buttonStyleActivity"></activity>
     </application>
 
 </manifest>
