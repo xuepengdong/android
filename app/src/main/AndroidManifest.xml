@@ -24,6 +24,7 @@
         <activity android:name=".Main2Activity"></activity>
         <activity android:name=".ViewBorderActivity"></activity>
         <activity android:name=".linearLayoutActivity"></activity>
+        <activity android:name=".activity_relative_layout"></activity>
     </application>
 
 </manifest>

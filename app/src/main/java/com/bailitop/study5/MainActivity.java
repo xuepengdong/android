@@ -42,6 +42,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        Button activity_relative_layout = findViewById(R.id.activity_relative_layout);
+        activity_relative_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,activity_relative_layout.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     protected void onResume(){
