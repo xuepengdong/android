@@ -25,6 +25,8 @@
         <activity android:name=".ViewBorderActivity"></activity>
         <activity android:name=".linearLayoutActivity"></activity>
         <activity android:name=".activity_relative_layout"></activity>
+        <activity android:name=".gridLayoutActivity"></activity>
+        <activity android:name=".scrollLayoutActivity"></activity>
     </application>
 
 </manifest>

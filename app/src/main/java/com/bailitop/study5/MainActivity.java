@@ -53,6 +53,30 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Button activity_grid_layout = findViewById(R.id.activity_grid_layout);
+        activity_grid_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,gridLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button scrollLayoutActivity = findViewById(R.id.scrollLayoutActivity);
+        scrollLayoutActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,scrollLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
+
+
     }
 
     protected void onResume(){
