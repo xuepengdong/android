@@ -23,6 +23,7 @@
         </activity>
         <activity android:name=".Main2Activity"></activity>
         <activity android:name=".ViewBorderActivity"></activity>
+        <activity android:name=".linearLayoutActivity"></activity>
     </application>
 
 </manifest>

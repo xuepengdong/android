@@ -32,11 +32,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Button activity_linear_layout = findViewById(R.id.activity_linear_layout);
+        activity_linear_layout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, linearLayoutActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 
     protected void onResume(){
         super.onResume();
-        goNextPage();//跳轉到下一個頁面
+        goNextPage();//跳转到下一个页面
     }
 
     private void goNextPage(){
