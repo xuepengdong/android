@@ -28,6 +28,7 @@
         <activity android:name=".gridLayoutActivity"></activity>
         <activity android:name=".scrollLayoutActivity"></activity>
         <activity android:name=".buttonStyleActivity"></activity>
+        <activity android:name=".buttonClickActivity"></activity>
     </application>
 
 </manifest>
