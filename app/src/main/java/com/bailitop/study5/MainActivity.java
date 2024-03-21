@@ -128,7 +128,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button activity_image_text = findViewById(R.id.activity_image_text);
+        activity_image_text.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,imageTextActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 

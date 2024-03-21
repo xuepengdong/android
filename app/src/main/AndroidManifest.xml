@@ -33,6 +33,7 @@
         <activity android:name=".buttonEnableActivity"></activity>
         <activity android:name=".imageScaleActivity"></activity>
         <activity android:name=".imageButtonActivity"></activity>
+        <activity android:name=".imageTextActivity"></activity>
     </application>
 
 </manifest>
