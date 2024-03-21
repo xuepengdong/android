@@ -109,6 +109,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Button activity_image_scale = findViewById(R.id.activity_image_scale);
+        activity_image_scale.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,imageScaleActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     protected void onResume(){
