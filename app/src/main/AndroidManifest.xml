@@ -32,6 +32,7 @@
         <activity android:name=".buttonLongclickActivity"></activity>
         <activity android:name=".buttonEnableActivity"></activity>
         <activity android:name=".imageScaleActivity"></activity>
+        <activity android:name=".imageButtonActivity"></activity>
     </application>
 
 </manifest>
