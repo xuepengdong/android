@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -146,6 +145,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+        Button activity_act_life = findViewById(R.id.activity_act_life);
+        activity_act_life.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, actLifeActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     protected void onResume(){

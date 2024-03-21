@@ -34,7 +34,8 @@
         <activity android:name=".imageScaleActivity"></activity>
         <activity android:name=".imageButtonActivity"></activity>
         <activity android:name=".imageTextActivity"></activity>
-        <activity android:name="com.bailitop.study5.actFinishActivity" />
+        <activity android:name=".actLifeActivity"></activity>
+        <activity android:name=".actFinishActivity" />
     </application>
 
 </manifest>

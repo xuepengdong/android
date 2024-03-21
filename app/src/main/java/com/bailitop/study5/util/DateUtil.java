@@ -19,4 +19,10 @@ public class DateUtil {
         return sdf.format(new Date());
     }
 
+    // 获取当前的时间（精确到毫秒）
+    public static String getNowTimeDetail() {
+        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss.SSS");
+        return sdf.format(new Date());
+    }
+
 }
