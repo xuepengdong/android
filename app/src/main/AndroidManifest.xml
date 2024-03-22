@@ -38,6 +38,8 @@
         <activity android:name=".actFinishActivity"></activity>
         <activity android:name=".jumpFirstActivity"></activity>
         <activity android:name=".jumpSecondActivity"></activity>
+        <activity android:name=".loginInputActivity"></activity>
+        <activity android:name=".loginSuccessActivity"></activity>
     </application>
 
 </manifest>

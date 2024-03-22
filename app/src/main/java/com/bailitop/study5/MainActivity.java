@@ -165,6 +165,15 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        Button activity_login_input = findViewById(R.id.activity_login_input);
+        activity_login_input.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, loginInputActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
     protected void onResume(){
