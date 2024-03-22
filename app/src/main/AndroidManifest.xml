@@ -35,7 +35,9 @@
         <activity android:name=".imageButtonActivity"></activity>
         <activity android:name=".imageTextActivity"></activity>
         <activity android:name=".actLifeActivity"></activity>
-        <activity android:name=".actFinishActivity" />
+        <activity android:name=".actFinishActivity"></activity>
+        <activity android:name=".jumpFirstActivity"></activity>
+        <activity android:name=".jumpSecondActivity"></activity>
     </application>
 
 </manifest>

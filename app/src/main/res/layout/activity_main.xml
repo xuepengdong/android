@@ -56,127 +56,136 @@
                 tools:ignore="MissingConstraints" />
         </LinearLayout>
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            tools:ignore="MissingConstraints,UnknownIdInLayout">
-            <Button
-                android:id="@+id/mybutton"
-                android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="跳转到ViewBorderActivity"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                android:orientation="vertical"
+                tools:ignore="MissingConstraints,UnknownIdInLayout">
+                <Button
+                    android:id="@+id/mybutton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到ViewBorderActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/activity_linear_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_linear_layout"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_linear_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_linear_layout"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/activity_relative_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到RelativeLayoutActivity"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_relative_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到RelativeLayoutActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/activity_grid_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_grid_layout"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_grid_layout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_grid_layout"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/scrollLayoutActivity"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到scrollLayoutActivity"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/scrollLayoutActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到scrollLayoutActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
-            <Button
-                android:id="@+id/activity_button_style"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_button_style"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
-
-
-            <Button
-                android:id="@+id/activity_button_click"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_button_click"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
-            <Button
-                android:id="@+id/activity_button_longclick"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_button_longclick"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
-
-            <Button
-                android:id="@+id/activity_button_enable"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_button_enable"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
-
-            <Button
-                android:id="@+id/activity_image_scale"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_image_scale"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_button_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_button_style"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
 
-            <Button
-                android:id="@+id/activity_image_button"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_image_button"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_button_click"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_button_click"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_button_longclick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_button_longclick"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/activity_button_enable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_button_enable"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/activity_image_scale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_image_scale"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
 
-            <Button
-                android:id="@+id/activity_image_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_image_text"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
-
-            <Button
-                android:id="@+id/activity_act_finish"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_act_finish"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
-
-            <Button
-                android:id="@+id/activity_act_life"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="跳转到activity_act_life"
-                android:layout_centerInParent="true"
-                tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_image_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_image_button"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/activity_image_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_image_text"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/activity_act_finish"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_act_finish"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/activity_act_life"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_act_life"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/activity_first_activity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到activity_first_activity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+            </LinearLayout>
+        </ScrollView>
     </LinearLayout>
 
 
