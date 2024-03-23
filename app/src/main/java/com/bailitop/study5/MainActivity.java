@@ -201,6 +201,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button choosePhotoActivity = findViewById(R.id.choosePhotoActivity);
+        choosePhotoActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, choosePhotoActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     protected void onResume(){

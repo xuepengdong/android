@@ -45,6 +45,7 @@
         <activity android:name=".actReceiveActivity"></activity>
         <activity android:name=".actRequestActivity"></activity>
         <activity android:name=".actResponseActivity"></activity>
+        <activity android:name=".choosePhotoActivity"></activity>
     </application>
 
 </manifest>
