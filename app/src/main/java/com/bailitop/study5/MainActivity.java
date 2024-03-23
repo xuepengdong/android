@@ -174,6 +174,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button activity_action_uri = findViewById(R.id.activity_action_uri);
+        activity_action_uri.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, actionUriActivity.class);
+                startActivity(intent);
+            }
+        });       
+        
+
 
     }
     protected void onResume(){

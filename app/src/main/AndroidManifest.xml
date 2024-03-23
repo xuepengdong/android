@@ -40,6 +40,7 @@
         <activity android:name=".jumpSecondActivity"></activity>
         <activity android:name=".loginInputActivity"></activity>
         <activity android:name=".loginSuccessActivity"></activity>
+        <activity android:name=".actionUriActivity"></activity>
     </application>
 
 </manifest>
