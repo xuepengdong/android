@@ -181,8 +181,18 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(MainActivity.this, actionUriActivity.class);
                 startActivity(intent);
             }
-        });       
-        
+        });
+
+        Button actSendActivity = findViewById(R.id.actSendActivity);
+        actSendActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, actSendActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
 
     }

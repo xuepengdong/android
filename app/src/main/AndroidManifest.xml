@@ -41,6 +41,8 @@
         <activity android:name=".loginInputActivity"></activity>
         <activity android:name=".loginSuccessActivity"></activity>
         <activity android:name=".actionUriActivity"></activity>
+        <activity android:name=".actSendActivity"></activity>
+        <activity android:name=".actReceiveActivity"></activity>
     </application>
 
 </manifest>
