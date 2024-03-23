@@ -43,6 +43,8 @@
         <activity android:name=".actionUriActivity"></activity>
         <activity android:name=".actSendActivity"></activity>
         <activity android:name=".actReceiveActivity"></activity>
+        <activity android:name=".actRequestActivity"></activity>
+        <activity android:name=".actResponseActivity"></activity>
     </application>
 
 </manifest>
