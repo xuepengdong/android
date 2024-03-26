@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="5dp"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_send_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="发送标准广播"
+        android:textColor="@color/black"
+        android:textSize="17sp"></Button>
+
+    <Button
+        android:id="@+id/tv_standard"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="left"
+        android:textColor="@color/black"
+        android:textSize="17sp"></Button>
+
+
+</LinearLayout>

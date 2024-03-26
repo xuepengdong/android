@@ -210,6 +210,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button broadStandardActivity = findViewById(R.id.broadStandardActivity);
+        broadStandardActivity.setOnClickListener(new View.OnClickListener() {ss
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, broadStandardActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
     protected void onResume(){
         super.onResume();
