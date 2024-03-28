@@ -60,6 +60,7 @@
         <activity android:name=".broadStandardActivity" />
         <activity android:name=".broadOrderActivity" />
         <activity android:name=".broadStaticActivity" />
+        <activity android:name=".alarmActivity" />
     </application>
 
 </manifest>

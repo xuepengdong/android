@@ -238,6 +238,18 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button alarmActivity = findViewById(R.id.alarmActivity);
+        alarmActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, alarmActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+
     }
     protected void onResume(){
         super.onResume();
