@@ -229,6 +229,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button broadStaticActivity = findViewById(R.id.broadStaticActivity);
+        broadStaticActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, broadStaticActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     protected void onResume(){

@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
+    <!-- 震动 -->
+    <uses-permission android:name="android.permission.VIBRATE" />
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -12,6 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Study5"
         tools:targetApi="31">
+        <receiver
+            android:name=".receiver.ShockReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.bailitop.study5.shock" />
+            </intent-filter>
+
+        </receiver>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -21,35 +32,34 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Main2Activity"></activity>
-        <activity android:name=".ViewBorderActivity"></activity>
-        <activity android:name=".linearLayoutActivity"></activity>
-        <activity android:name=".activity_relative_layout"></activity>
-        <activity android:name=".gridLayoutActivity"></activity>
-        <activity android:name=".scrollLayoutActivity"></activity>
-        <activity android:name=".buttonStyleActivity"></activity>
-        <activity android:name=".buttonClickActivity"></activity>
-        <activity android:name=".buttonLongclickActivity"></activity>
-        <activity android:name=".buttonEnableActivity"></activity>
-        <activity android:name=".imageScaleActivity"></activity>
-        <activity android:name=".imageButtonActivity"></activity>
-        <activity android:name=".imageTextActivity"></activity>
-        <activity android:name=".actLifeActivity"></activity>
-        <activity android:name=".actFinishActivity"></activity>
-        <activity android:name=".jumpFirstActivity"></activity>
-        <activity android:name=".jumpSecondActivity"></activity>
-        <activity android:name=".loginInputActivity"></activity>
-        <activity android:name=".loginSuccessActivity"></activity>
-        <activity android:name=".actionUriActivity"></activity>
-        <activity android:name=".actSendActivity"></activity>
-        <activity android:name=".actReceiveActivity"></activity>
-        <activity android:name=".actRequestActivity"></activity>
-        <activity android:name=".actResponseActivity"></activity>
-        <activity android:name=".choosePhotoActivity"></activity>
-        <activity android:name=".broadStandardActivity"></activity>
-        <activity android:name=".broadOrderActivity"></activity>
-
-
+        <activity android:name=".Main2Activity" />
+        <activity android:name=".ViewBorderActivity" />
+        <activity android:name=".linearLayoutActivity" />
+        <activity android:name=".activity_relative_layout" />
+        <activity android:name=".gridLayoutActivity" />
+        <activity android:name=".scrollLayoutActivity" />
+        <activity android:name=".buttonStyleActivity" />
+        <activity android:name=".buttonClickActivity" />
+        <activity android:name=".buttonLongclickActivity" />
+        <activity android:name=".buttonEnableActivity" />
+        <activity android:name=".imageScaleActivity" />
+        <activity android:name=".imageButtonActivity" />
+        <activity android:name=".imageTextActivity" />
+        <activity android:name=".actLifeActivity" />
+        <activity android:name=".actFinishActivity" />
+        <activity android:name=".jumpFirstActivity" />
+        <activity android:name=".jumpSecondActivity" />
+        <activity android:name=".loginInputActivity" />
+        <activity android:name=".loginSuccessActivity" />
+        <activity android:name=".actionUriActivity" />
+        <activity android:name=".actSendActivity" />
+        <activity android:name=".actReceiveActivity" />
+        <activity android:name=".actRequestActivity" />
+        <activity android:name=".actResponseActivity" />
+        <activity android:name=".choosePhotoActivity" />
+        <activity android:name=".broadStandardActivity" />
+        <activity android:name=".broadOrderActivity" />
+        <activity android:name=".broadStaticActivity" />
     </application>
 
 </manifest>
