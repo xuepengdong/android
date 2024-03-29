@@ -247,8 +247,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button serviceNormalActivity = findViewById(R.id.serviceNormalActivity);
+        serviceNormalActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.serviceNormalActivity.class);
+                startActivity(intent);
+            }
+        });
 
-
+        Button bindImmediateActivity = findViewById(R.id.bindImmediateActivity);
+        bindImmediateActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.bindImmediateActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     protected void onResume(){

@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
+
     <!-- 震动 -->
     <uses-permission android:name="android.permission.VIBRATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +15,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Study5"
         tools:targetApi="31">
+        <service
+            android:name=".service.BindImmediateService"
+            android:enabled="true"
+            android:exported="true"></service>
+        <service
+            android:name=".service.NormalService"
+            android:enabled="true"
+            android:exported="true" />
+
         <receiver
             android:name=".receiver.ShockReceiver"
             android:enabled="true"
@@ -20,7 +31,6 @@
             <intent-filter>
                 <action android:name="com.bailitop.study5.shock" />
             </intent-filter>
-
         </receiver>
 
         <activity
@@ -61,6 +71,8 @@
         <activity android:name=".broadOrderActivity" />
         <activity android:name=".broadStaticActivity" />
         <activity android:name=".alarmActivity" />
+        <activity android:name=".serviceNormalActivity" />
+        <activity android:name=".bindImmediateActivity" />
     </application>
 
 </manifest>

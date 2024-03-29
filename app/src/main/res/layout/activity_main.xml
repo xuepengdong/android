@@ -253,6 +253,20 @@
                     android:text="跳转到alarmActivity"
                     android:layout_centerInParent="true"
                     tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/serviceNormalActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到serviceNormalActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+                <Button
+                    android:id="@+id/bindImmediateActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到bindImmediateActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
 
             </LinearLayout>
