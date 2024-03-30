@@ -73,6 +73,7 @@
         <activity android:name=".alarmActivity" />
         <activity android:name=".serviceNormalActivity" />
         <activity android:name=".bindImmediateActivity" />
+        <activity android:name=".serviceDataActivity" />
     </application>
 
 </manifest>

@@ -265,6 +265,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button serviceDataActivity = findViewById(R.id.serviceDataActivity);
+        serviceDataActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.serviceDataActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
     }
     protected void onResume(){
         super.onResume();
