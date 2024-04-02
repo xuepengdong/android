@@ -274,6 +274,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button chapter05_drawableShapeActivity = findViewById(R.id.chapter05_drawableShapeActivity);
+        chapter05_drawableShapeActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.drawableShapeActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
