@@ -75,6 +75,7 @@
         <activity android:name=".bindImmediateActivity" />
         <activity android:name=".serviceDataActivity" />
         <activity android:name=".chapter05.drawableShapeActivity" />
+        <activity android:name=".chapter05.nineSelectorActivity" />
     </application>
 
 </manifest>

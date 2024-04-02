@@ -283,6 +283,16 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button nineSelectorActivity = findViewById(R.id.nineSelectorActivity);
+        nineSelectorActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.nineSelectorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
     protected void onResume(){

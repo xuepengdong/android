@@ -14,3 +14,5 @@
 .cxx
 local.properties
 /.idea
+/information/code/android3/.idea/vcs.xml
+vcs.xml
