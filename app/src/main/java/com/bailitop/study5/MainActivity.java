@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.bailitop.study5.chapter05.checkBoxActivity;
+import com.bailitop.study5.chapter05.switchIosActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -302,6 +303,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button switchIosActivity = findViewById(R.id.switchIosActivity);
+        switchIosActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.switchIosActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
     protected void onResume(){
