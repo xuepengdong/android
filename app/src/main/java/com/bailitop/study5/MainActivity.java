@@ -9,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.bailitop.study5.chapter05.checkBoxActivity;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -292,7 +294,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button chapter05_checkBoxActivity = findViewById(R.id.chapter05_checkBoxActivity);
+        chapter05_checkBoxActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, checkBoxActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     protected void onResume(){

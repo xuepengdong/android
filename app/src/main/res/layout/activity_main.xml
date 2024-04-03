@@ -291,7 +291,13 @@
                     android:text="跳转到nineSelectorActivity"
                     android:layout_centerInParent="true"
                     tools:ignore="MissingConstraints" />
-
+                <Button
+                    android:id="@+id/chapter05_checkBoxActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到chapter05_checkBoxActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
             </LinearLayout>
         </ScrollView>

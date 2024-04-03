@@ -76,6 +76,7 @@
         <activity android:name=".serviceDataActivity" />
         <activity android:name=".chapter05.drawableShapeActivity" />
         <activity android:name=".chapter05.nineSelectorActivity" />
+        <activity android:name=".chapter05.checkBoxActivity" />
     </application>
 
 </manifest>
