@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.bailitop.study5.chapter05.checkBoxActivity;
+import com.bailitop.study5.chapter05.editSimpleActivity;
 import com.bailitop.study5.chapter05.radioHorizontalActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -322,7 +323,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button editSimple = findViewById(R.id.editSimple);
+        editSimple.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, editSimpleActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     protected void onResume(){
         super.onResume();
