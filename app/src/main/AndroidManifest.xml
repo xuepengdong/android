@@ -78,6 +78,7 @@
         <activity android:name=".chapter05.nineSelectorActivity" />
         <activity android:name=".chapter05.checkBoxActivity" />
         <activity android:name=".chapter05.switchIosActivity" />
+        <activity android:name=".chapter05.radioHorizontalActivity" />
     </application>
 
 </manifest>

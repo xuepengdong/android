@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.bailitop.study5.chapter05.checkBoxActivity;
-import com.bailitop.study5.chapter05.switchIosActivity;
+import com.bailitop.study5.chapter05.radioHorizontalActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -309,6 +309,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.switchIosActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button radioHorizontalActivity = findViewById(R.id.radioHorizontalActivity);
+        radioHorizontalActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.radioHorizontalActivity.class);
                 startActivity(intent);
             }
         });
