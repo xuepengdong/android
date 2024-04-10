@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.bailitop.study5.chapter05.checkBoxActivity;
+import com.bailitop.study5.chapter05.editFocusActivity;
 import com.bailitop.study5.chapter05.editSimpleActivity;
 import com.bailitop.study5.chapter05.radioHorizontalActivity;
 
@@ -331,6 +332,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button editFocus = findViewById(R.id.editFocus);
+        editFocus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, editFocusActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
     protected void onResume(){
         super.onResume();

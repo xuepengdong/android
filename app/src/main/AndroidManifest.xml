@@ -80,6 +80,7 @@
         <activity android:name=".chapter05.switchIosActivity" />
         <activity android:name=".chapter05.radioHorizontalActivity" />
         <activity android:name=".chapter05.editSimpleActivity" />
+        <activity android:name=".chapter05.editFocusActivity" />
     </application>
 
 </manifest>
