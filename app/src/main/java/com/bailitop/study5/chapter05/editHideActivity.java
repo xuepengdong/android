@@ -52,8 +52,6 @@ public class editHideActivity  extends AppCompatActivity {
             if ((str.length() == 11 && mMaxLength == 11) || (str.length() == 6 && mMaxLength == 6)) {
                 ViewUtil.hideOneInputMethod(editHideActivity.this, mView); // 隐藏输入法软键盘
             }
-
-
         }
     }
 }
