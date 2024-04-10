@@ -329,7 +329,13 @@
                     android:layout_centerInParent="true"
                     tools:ignore="MissingConstraints" />
 
-
+                <Button
+                    android:id="@+id/editHide"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到editHide"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
             </LinearLayout>
         </ScrollView>

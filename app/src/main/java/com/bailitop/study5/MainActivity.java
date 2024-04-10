@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import com.bailitop.study5.chapter05.checkBoxActivity;
 import com.bailitop.study5.chapter05.editFocusActivity;
+import com.bailitop.study5.chapter05.editHideActivity;
 import com.bailitop.study5.chapter05.editSimpleActivity;
 import com.bailitop.study5.chapter05.radioHorizontalActivity;
 
@@ -338,6 +339,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, editFocusActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button editHide = findViewById(R.id.editHide);
+        editHide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, editHideActivity.class);
                 startActivity(intent);
             }
         });
