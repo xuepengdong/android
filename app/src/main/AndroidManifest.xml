@@ -82,6 +82,7 @@
         <activity android:name=".chapter05.editSimpleActivity" />
         <activity android:name=".chapter05.editFocusActivity" />
         <activity android:name=".chapter05.editHideActivity" />
+        <activity android:name=".chapter05.alertDialogActivity" />
     </application>
 
 </manifest>

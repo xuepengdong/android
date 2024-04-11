@@ -52,7 +52,7 @@ public class editFocusActivity  extends AppCompatActivity implements View.OnClic
             }
         } else if (v.getId()  == R.id.btn_login) {
             String password = et_password.getText().toString();
-            if(TextUtils.isEmpty(password) || password.length()< 11){
+            if(TextUtils.isEmpty(password) || password.length()< 6){
                 et_password.requestFocus();
                 Toast.makeText(this, "请输入6位密码", Toast.LENGTH_SHORT).show();
             }

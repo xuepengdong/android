@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.bailitop.study5.chapter05.alertDialogActivity;
 import com.bailitop.study5.chapter05.checkBoxActivity;
 import com.bailitop.study5.chapter05.editFocusActivity;
 import com.bailitop.study5.chapter05.editHideActivity;
@@ -351,6 +352,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        Button alertDialogActivity = findViewById(R.id.alertDialogActivity);
+        alertDialogActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.alertDialogActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
     protected void onResume(){
