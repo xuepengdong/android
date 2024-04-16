@@ -351,7 +351,13 @@
                     android:text="跳转到datePickerActivity"
                     android:layout_centerInParent="true"
                     tools:ignore="MissingConstraints" />
-
+                <Button
+                    android:id="@+id/timePickerActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到timePickerActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
 
             </LinearLayout>
         </ScrollView>

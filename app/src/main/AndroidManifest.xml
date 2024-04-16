@@ -84,6 +84,7 @@
         <activity android:name=".chapter05.editHideActivity" />
         <activity android:name=".chapter05.alertDialogActivity" />
         <activity android:name=".chapter05.datePickerActivity" />
+        <activity android:name=".chapter05.timePickerActivity" />
     </application>
 
 </manifest>

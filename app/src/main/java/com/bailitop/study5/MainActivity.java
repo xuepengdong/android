@@ -371,6 +371,17 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button timePickerActivity = findViewById(R.id.timePickerActivity);
+        timePickerActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.timePickerActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
     protected void onResume(){
         super.onResume();
