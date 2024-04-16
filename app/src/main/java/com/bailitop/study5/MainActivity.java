@@ -363,7 +363,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button datePickerActivity = findViewById(R.id.datePickerActivity);
+        datePickerActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.datePickerActivity.class);
+                startActivity(intent);
+            }
+        });
     }
     protected void onResume(){
         super.onResume();

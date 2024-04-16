@@ -83,6 +83,7 @@
         <activity android:name=".chapter05.editFocusActivity" />
         <activity android:name=".chapter05.editHideActivity" />
         <activity android:name=".chapter05.alertDialogActivity" />
+        <activity android:name=".chapter05.datePickerActivity" />
     </application>
 
 </manifest>
