@@ -380,7 +380,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        Button LoginMainActivity = findViewById(R.id.LoginMainActivity);
+        LoginMainActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, com.bailitop.study5.chapter05.LoginMainActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
     protected void onResume(){

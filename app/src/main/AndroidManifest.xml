@@ -85,6 +85,8 @@
         <activity android:name=".chapter05.alertDialogActivity" />
         <activity android:name=".chapter05.datePickerActivity" />
         <activity android:name=".chapter05.timePickerActivity" />
+        <activity android:name=".chapter05.LoginMainActivity" />
+        <activity android:name=".chapter05.loginForgetActivity" />
     </application>
 
 </manifest>
