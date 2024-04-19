@@ -26,5 +26,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button ShareReadActivity = findViewById(R.id.ShareReadActivity);
+        ShareReadActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ShareReadActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

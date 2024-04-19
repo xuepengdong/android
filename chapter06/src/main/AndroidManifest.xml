@@ -19,6 +19,7 @@
         </activity>
 
         <activity android:name="ShareWriteActivity" />
+        <activity android:name=".ShareReadActivity" />
     </application>
 
 </manifest>
