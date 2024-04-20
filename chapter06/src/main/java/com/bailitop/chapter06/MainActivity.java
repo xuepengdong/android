@@ -15,8 +15,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
 
-
-
         Button ShareWriteActivity = findViewById(R.id.ShareWriteActivity);
         ShareWriteActivity.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,5 +32,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button LoginShareActivity = findViewById(R.id.LoginShareActivity);
+        LoginShareActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginShareActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
