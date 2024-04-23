@@ -21,6 +21,7 @@
         <activity android:name="ShareWriteActivity" />
         <activity android:name=".ShareReadActivity" />
         <activity android:name=".LoginShareActivity" />
+        <activity android:name=".LoginForgetActivity" />
     </application>
 
 </manifest>
