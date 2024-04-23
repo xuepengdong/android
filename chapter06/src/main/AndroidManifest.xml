@@ -24,6 +24,7 @@
         <activity android:name=".LoginForgetActivity" />
         <activity android:name=".DatastroeWriteActivity" />
         <activity android:name=".DatastoreReadActivity" />
+        <activity android:name=".DatabaseActivity" />
     </application>
 
 </manifest>

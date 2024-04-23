@@ -59,7 +59,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button DatabaseActivity = findViewById(R.id.DatabaseActivity);
+        DatabaseActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DatabaseActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
