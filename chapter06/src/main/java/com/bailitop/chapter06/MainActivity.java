@@ -42,6 +42,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button DatastroeWriteActivity = findViewById(R.id.DatastroeWriteActivity);
+        DatastroeWriteActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DatastroeWriteActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button DatastoreReadActivity = findViewById(R.id.DatastoreReadActivity);
+        DatastoreReadActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, DatastoreReadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
 
     }
 }
