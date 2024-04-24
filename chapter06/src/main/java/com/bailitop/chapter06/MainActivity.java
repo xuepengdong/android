@@ -68,5 +68,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button SQLiteWriteActivity = findViewById(R.id.SQLiteWriteActivity);
+        SQLiteWriteActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SQLiteWriteActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button SQLiteReadActivity = findViewById(R.id.SQLiteReadActivity);
+        SQLiteReadActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SQLiteReadActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
