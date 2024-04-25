@@ -27,6 +27,7 @@
         <activity android:name=".DatabaseActivity" />
         <activity android:name=".SQLiteWriteActivity" />
         <activity android:name=".SQLiteReadActivity" />
+        <activity android:name=".LoginSQLiteActivity" />
     </application>
 
 </manifest>

@@ -86,5 +86,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button LoginSQLiteActivity = findViewById(R.id.LoginSQLiteActivity);
+        LoginSQLiteActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LoginSQLiteActivity.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
