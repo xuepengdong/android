@@ -1,5 +1,6 @@
 package com.bailitop.chapter06;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
@@ -25,57 +26,91 @@ import util.DateUtil;
 import util.ToastUtil;
 import util.ViewUtil;
 
+@SuppressLint("DefaultLocale")
 public class LoginSQLiteActivity extends AppCompatActivity implements View.OnClickListener, View.OnFocusChangeListener {
-    private RadioGroup rg_login;
-    private RadioButton rb_password;
-    private RadioButton rb_verifycode;
-    private TextView tv_phone;
-    private EditText et_phone;
-    private TextView tv_password;
-    private EditText et_password;
-    private Button btn_forget;
-    private CheckBox ck_remember;
-    private boolean isRemember = false; // 是否记住密码
+    private RadioGroup rg_login; // 声明一个单选组对象
+    private RadioButton rb_password; // 声明一个单选按钮对象
+    private RadioButton rb_verifycode; // 声明一个单选按钮对象
+    private EditText et_phone; // 声明一个编辑框对象
+    private TextView tv_password; // 声明一个文本视图对象
+    private EditText et_password; // 声明一个编辑框对象
+    private Button btn_forget; // 声明一个按钮控件对象
+    private CheckBox ck_remember; // 声明一个复选框对象
+
     private int mRequestCode = 0; // 跳转页面时的请求代码
-    private String mVerifyCode; // 验证码
+    private boolean isRemember = false; // 是否记住密码
     private String mPassword = "111111"; // 默认密码
+    private String mVerifyCode; // 验证码
     private UserDBHelper mHelper; // 声明一个用户数据库的帮助器对象
 
-
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login_sqlite);
         rg_login = findViewById(R.id.rg_login);
         rb_password = findViewById(R.id.rb_password);
         rb_verifycode = findViewById(R.id.rb_verifycode);
-        tv_phone = findViewById(R.id.tv_phone);
+        et_phone = findViewById(R.id.et_phone);
+        tv_password = findViewById(R.id.tv_password);
         et_password = findViewById(R.id.et_password);
         btn_forget = findViewById(R.id.btn_forget);
         ck_remember = findViewById(R.id.ck_remember);
-        et_phone = findViewById(R.id.et_phone);
-        rg_login.setOnCheckedChangeListener(new  RadioListener());
-        ck_remember.setOnCheckedChangeListener((buttonView, isChecked) -> isRemember=isChecked);
+        // 给rg_login设置单选监听器
+        rg_login.setOnCheckedChangeListener(new RadioListener());
+        // 给ck_remember设置勾选监听器
+        ck_remember.setOnCheckedChangeListener((buttonView, isChecked) -> isRemember = isChecked);
+        // 给et_phone添加文本变更监听器
         et_phone.addTextChangedListener(new HideTextWatcher(et_phone, 11));
+        // 给et_password添加文本变更监听器
+        et_password.addTextChangedListener(new HideTextWatcher(et_password, 6));
+        btn_forget.setOnClickListener(this);
+        findViewById(R.id.btn_login).setOnClickListener(this);
+        // 给密码编辑框注册一个焦点变化监听器，一旦焦点发生变化，就触发监听器的onFocusChange方法
+        et_password.setOnFocusChangeListener(this);
     }
 
-    private class HideTextWatcher implements TextWatcher{
-        private EditText mView;
-        private int mMaxLength;
-        public HideTextWatcher(EditText v, int mMaxLength){
+    // 定义登录方式的单选监听器
+    private class RadioListener implements RadioGroup.OnCheckedChangeListener {
+        @Override
+        public void onCheckedChanged(RadioGroup group, int checkedId) {
+            if (checkedId == R.id.rb_password) { // 选择了密码登录
+                tv_password.setText("登录密码：");
+                et_password.setHint("请输入密码");
+                btn_forget.setText("忘记密码");
+                ck_remember.setVisibility(View.VISIBLE);
+            } else if (checkedId == R.id.rb_verifycode) { // 选择了验证码登录
+                tv_password.setText("　验证码：");
+                et_password.setHint("请输入验证码");
+                btn_forget.setText("获取验证码");
+                ck_remember.setVisibility(View.GONE);
+            }
+        }
+    }
+
+    // 定义一个编辑框监听器，在输入文本达到指定长度时自动隐藏输入法
+    private class HideTextWatcher implements TextWatcher {
+        private EditText mView; // 声明一个编辑框对象
+        private int mMaxLength; // 声明一个最大长度变量
+
+        public HideTextWatcher(EditText v, int maxLength) {
             super();
             mView = v;
-            mMaxLength = mMaxLength;
+            mMaxLength = maxLength;
         }
-        public void beforeTextChanged(CharSequence s, int start, int count, int after){}
 
-        public void onTextChanged(CharSequence s, int start, int before, int count){}
+        // 在编辑框的输入文本变化前触发
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
 
-        public void afterTextChanged(Editable s){
-            String str = s.toString();
-            if((str.length() == 11 && mMaxLength == 11) || (str.length() ==6 && mMaxLength ==6)){
-                ViewUtil.hideOneInputMethod(LoginSQLiteActivity.this, mView );
+        // 在编辑框的输入文本变化时触发
+        public void onTextChanged(CharSequence s, int start, int before, int count) {}
+
+        // 在编辑框的输入文本变化后触发
+        public void afterTextChanged(Editable s) {
+            String str = s.toString(); // 获得已输入的文本字符串
+            // 输入文本达到11位（如手机号码），或者达到6位（如登录密码）时关闭输入法
+            if ((str.length() == 11 && mMaxLength == 11)
+                    || (str.length() == 6 && mMaxLength == 6)) {
+                ViewUtil.hideOneInputMethod(LoginSQLiteActivity.this, mView); // 隐藏输入法软键盘
             }
         }
     }
@@ -125,23 +160,23 @@ public class LoginSQLiteActivity extends AppCompatActivity implements View.OnCli
         }
     }
 
-    private void loginSuccess(){
-        String desc = String.format("您的手机号码是%s，恭喜你通过登录验证，点击“确定”按钮返回上个页面", et_phone.getText().toString());
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setTitle("登录成功");
-        builder.setMessage(desc);
-        builder.setPositiveButton("确定返回", (dialog, which) -> finish());
-        builder.setNegativeButton("我在看看", null);
-        AlertDialog alert = builder.create();
-        alert.show();
-        if(isRemember){
-            UserInfo info = new UserInfo();
-            info.phone = et_phone.getText().toString();
-            info.password = et_password.getText().toString();
-            info.update_time = DateUtil.getNowDateTime("yy-MM-dd HH:mm:ss");
-            mHelper.insert(info);
+    // 从下一个页面携带参数返回当前页面时触发
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == mRequestCode && data != null) {
+            // 用户密码已改为新密码，故更新密码变量
+            mPassword = data.getStringExtra("new_password");
         }
     }
+
+    // 从修改密码页面返回登录页面，要清空密码的输入框
+    @Override
+    protected void onRestart() {
+        super.onRestart();
+        et_password.setText("");
+    }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -155,25 +190,43 @@ public class LoginSQLiteActivity extends AppCompatActivity implements View.OnCli
         mHelper.closeLink(); // 暂停页面，则关闭数据库连接
     }
 
-    @Override
-    public void onFocusChange(View view, boolean b) {
-
+    // 校验通过，登录成功
+    private void loginSuccess() {
+        String desc = String.format("您的手机号码是%s，恭喜你通过登录验证，点击“确定”按钮返回上个页面",
+                et_phone.getText().toString());
+        // 以下弹出提醒对话框，提示用户登录成功
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("登录成功");
+        builder.setMessage(desc);
+        builder.setPositiveButton("确定返回", (dialog, which) -> finish());
+        builder.setNegativeButton("我再看看", null);
+        AlertDialog alert = builder.create();
+        alert.show();
+        // 如果勾选了“记住密码”，则把手机号码和密码保存为数据库的用户表记录
+        if (isRemember) {
+            UserInfo info = new UserInfo(); // 创建一个用户信息对象
+            info.phone = et_phone.getText().toString();
+            info.password = et_password.getText().toString();
+            info.update_time = DateUtil.getNowDateTime("yyyy-MM-dd HH:mm:ss");
+            mHelper.insert(info); // 往用户数据库添加登录成功的用户信息
+        }
     }
 
-    private class RadioListener implements RadioGroup.OnCheckedChangeListener{
-
-        @Override
-        public void onCheckedChanged(RadioGroup group, int checkedId) {
-            if(checkedId == R.id.rb_password){
-                tv_password.setText("登录密码：");
-                et_password.setHint("请输入密码");
-                btn_forget.setText("忘记密码");
-                ck_remember.setVisibility(View.VISIBLE);
-            }else if(checkedId == R.id.rb_verifycode){
-                tv_password.setText("  验证码：");
-                et_password.setHint("请输入验证码");
-                btn_forget.setText("获取验证码");
-                ck_remember.setVisibility(View.GONE);
+    // 焦点变更事件的处理方法，hasFocus表示当前控件是否获得焦点。
+    // 为什么光标进入密码框事件不选onClick？因为要点两下才会触发onClick动作（第一下是切换焦点动作）
+    @Override
+    public void onFocusChange(View v, boolean hasFocus) {
+        String phone = et_phone.getText().toString();
+        // 判断是否是密码编辑框发生焦点变化
+        if (v.getId() == R.id.et_password) {
+            // 用户已输入手机号码，且密码框获得焦点
+            if (phone.length() > 0 && hasFocus) {
+                // 根据手机号码到数据库中查询用户记录
+                UserInfo info = mHelper.queryByPhone(phone);
+                if (info != null) {
+                    // 找到用户记录，则自动在密码框中填写该用户的密码
+                    et_password.setText(info.password);
+                }
             }
         }
     }
