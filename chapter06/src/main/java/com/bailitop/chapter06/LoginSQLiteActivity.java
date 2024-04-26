@@ -187,7 +187,7 @@ public class LoginSQLiteActivity extends AppCompatActivity implements View.OnCli
 
     // 校验通过，登录成功
     private void loginSuccess() {
-        String desc = String.format("您的手机号码是%s，恭喜你通过登录验证，点击“确定”按钮返回上个页面",
+        String desc = String.format("您的手机号码是%s，恭喜2你通过登录验证，点击“确定”按钮返回上个页面",
                 et_phone.getText().toString());
         // 以下弹出提醒对话框，提示用户登录成功
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
