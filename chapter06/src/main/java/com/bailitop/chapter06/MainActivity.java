@@ -95,5 +95,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button FilePathActivity = findViewById(R.id.FilePathActivity);
+        FilePathActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FilePathActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 }
