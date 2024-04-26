@@ -103,7 +103,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        Button ImageWriteAcitvity = findViewById(R.id.ImageWriteAcitvity);
+        ImageWriteAcitvity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ImageWriteAcitvity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
