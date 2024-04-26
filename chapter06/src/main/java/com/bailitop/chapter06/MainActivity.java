@@ -1,11 +1,15 @@
 package com.bailitop.chapter06;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import util.PermissionUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -111,6 +115,16 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Button FileWriteActivity = findViewById(R.id.FileWriteActivity);
+        FileWriteActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, FileWriteActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 }

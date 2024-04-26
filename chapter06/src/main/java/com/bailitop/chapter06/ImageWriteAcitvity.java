@@ -3,7 +3,6 @@ package com.bailitop.chapter06;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.os.Environment;
-import android.os.FileUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
@@ -12,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 
 import util.DateUtil;
 import util.FileUtil;

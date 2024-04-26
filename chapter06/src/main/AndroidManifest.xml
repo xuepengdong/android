@@ -33,6 +33,7 @@
         <activity android:name=".LoginSQLiteActivity" />
         <activity android:name=".FilePathActivity" />
         <activity android:name=".ImageWriteAcitvity" />
+        <activity android:name=".FileWriteActivity" />
     </application>
 
 </manifest>
