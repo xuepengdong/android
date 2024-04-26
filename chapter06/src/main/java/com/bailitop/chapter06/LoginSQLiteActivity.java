@@ -13,17 +13,12 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import java.util.Random;
-
 import bean.UserInfo;
 import database.UserDBHelper;
 import util.DateUtil;
-import util.ToastUtil;
 import util.ViewUtil;
 
 @SuppressLint("DefaultLocale")
