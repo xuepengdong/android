@@ -109,6 +109,23 @@
                     android:layout_centerInParent="true"
                     tools:ignore="MissingConstraints" />
 
+                <Button
+                    android:id="@+id/AppWriteActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到AppWriteActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+
+                <Button
+                    android:id="@+id/AppReadActivity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="跳转到AppReadActivity"
+                    android:layout_centerInParent="true"
+                    tools:ignore="MissingConstraints" />
+
+
 
             </LinearLayout>
         </ScrollView>
