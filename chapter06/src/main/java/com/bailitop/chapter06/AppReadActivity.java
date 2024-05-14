@@ -25,7 +25,7 @@ public class AppReadActivity extends AppCompatActivity {
         for (Map.Entry<String, String> item_map : mapParam.entrySet()) {
             desc = String.format("%s\n　%s的取值为%s", desc, item_map.getKey(), item_map.getValue());
         }
-        if (mapParam.size() <= 0) {
+        if (mapParam.size() <= 0) { 
             desc = "全局内存中保存的信息为空";
         }
         tv_app.setText(desc);

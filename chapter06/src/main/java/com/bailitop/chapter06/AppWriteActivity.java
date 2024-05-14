@@ -63,14 +63,14 @@ public class AppWriteActivity extends AppCompatActivity implements CompoundButto
                 ToastUtil.show(this, "请先填写体重");
                 return;
             }
-            MainApplication app = MainApplication.getInstance();
-            app.infoMap.put("name", name);
-            app.infoMap.put("age", age);
-            app.infoMap.put("height", height);
-            app.infoMap.put("weight", weight);
-            app.infoMap.put("married", typeArray[!isMarried ? 0 : 1]);
-            app.infoMap.put("update_time", DateUtil.getNowDateTime("yyyy-MM-dd HH:mm:ss"));
-            ToastUtil.show(this, "数据已写入全局内存");
+//            MainApplication app = MainApplication.getInstance();
+//            app.infoMap.put("name", name);
+//            app.infoMap.put("age", age);
+//            app.infoMap.put("height", height);
+//            app.infoMap.put("weight", weight);
+//            app.infoMap.put("married", typeArray[!isMarried ? 0 : 1]);
+//            app.infoMap.put("update_time", DateUtil.getNowDateTime("yyyy-MM-dd HH:mm:ss"));
+//            ToastUtil.show(this, "数据已写入全局内存");
         }
     }
 }

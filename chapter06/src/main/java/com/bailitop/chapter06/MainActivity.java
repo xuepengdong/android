@@ -143,5 +143,25 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button MainActivity = findViewById(R.id.MainActivity);
+        MainActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, AppReadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button RoomReadActivity = findViewById(R.id.RoomReadActivity);
+        RoomReadActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, RoomReadActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
     }
 }
