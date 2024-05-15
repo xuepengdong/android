@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
     <!-- 存储卡读写 -->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:name=".MainApplication"
-        android:requestLegacyExternalStorage="true"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Study5">
+        <provider
+            android:name="provider.UserInfoProvider"
+            android:authorities="com.bailitop.provider.UserInfoProvider"
+            android:enabled="true"
+            android:exported="true"></provider>
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -22,8 +29,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="ShareWriteActivity" />
+        <activity android:name=".ShareWriteActivity" />
         <activity android:name=".ShareReadActivity" />
         <activity android:name=".LoginShareActivity" />
         <activity android:name=".LoginForgetActivity" />
@@ -38,6 +44,7 @@
         <activity android:name=".FileWriteActivity" />
         <activity android:name=".AppWriteActivity" />
         <activity android:name=".AppReadActivity" />
+        <activity android:name=".ContentWriteActivity" />
     </application>
 
 </manifest>

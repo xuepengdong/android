@@ -161,7 +161,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
+        Button ContentWriteActivity = findViewById(R.id.ContentWriteActivity);
+        ContentWriteActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ContentWriteActivity.class);
+                startActivity(intent);
+            }
+        });
 
     }
 }
